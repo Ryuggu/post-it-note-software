@@ -76,8 +76,25 @@ function buildList()
       
     liElm.appendChild(btnEditElm);
     liElm.appendChild(btnDelElm);
+      
     btnDelElm.innerHTML = "Delete";
+    btnDelElm.classList.add("delBtn");
+      
     btnEditElm.innerHTML = "Edit";
+    btnEditElm.classList.add("editBtn");
+      
+    
+      
+    var delbtn = document.querySelector(delbtn);
+    
+    delBtn.addEventListener("click", function(event){
+    var index = event.target.getAttribute("data-index");
+    var note = getLocal();
+    notes[index].text = "changed";
+    setLocal(notes);
+    buildList();
+    });
+      
   }
 }
 
