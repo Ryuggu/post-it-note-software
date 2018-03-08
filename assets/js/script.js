@@ -74,6 +74,8 @@ function buildList()
 
     ulElm.appendChild(liElm);
 
+
+
     liElm.appendChild(btnEditElm);
     liElm.appendChild(btnDelElm);
 
@@ -83,16 +85,14 @@ function buildList()
     btnEditElm.innerHTML = "Edit";
     btnEditElm.classList.add("editBtn");
 
+    btnEditElm.setAttribute("data-index",i)
 
-
-    var delbtn = document.querySelector(delbtn);
-
-    delBtn.addEventListener("click", function(event){
-    var index = event.target.getAttribute("data-index");
-    var note = getLocal();
-    notes[index].text = "changed";
-    setLocal(notes);
-    buildList();
+    btnEditElm.addEventListener("click", function(event){
+        var index = event.target.getAttribute("data-index");
+        var note = getLocal();
+        notes[index].text = "changed";
+        setLocal(notes);
+        buildList();
     });
 
   }
