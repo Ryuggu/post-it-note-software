@@ -45,6 +45,7 @@ function buildList()
   {
     var liElm = document.createElement("li");
     var pElm = document.createElement("p");
+    var btnElm = document.createElement("button")
 
     if(notes[i].important === true)
     {
