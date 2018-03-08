@@ -51,8 +51,9 @@ function buildList()
   {
     var liElm = document.createElement("li");
     var pElm = document.createElement("p");
-    var btnElm = document.createElement("button")
-
+    var btnEditElm = document.createElement("button")
+    var btnDelElm = document.createElement("button")
+    
     if(notes[i].important === true)
     {
       liElm.style.backgroundColor = "#800080";
@@ -72,6 +73,11 @@ function buildList()
     }
 
     ulElm.appendChild(liElm);
+      
+    liElm.appendChild(btnEditElm);
+    liElm.appendChild(btnDelElm);
+    btnDelElm.innerHTML = "Delete";
+    btnEditElm.innerHTML = "Edit";
   }
 }
 
