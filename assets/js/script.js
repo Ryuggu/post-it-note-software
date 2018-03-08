@@ -12,12 +12,16 @@ function getLocal()
     }
 }
 
+
+
 function setLocal(originNotes)
 {
     var newNotes = JSON.stringify(originNotes);
 
     localStorage.setItem("noteList", newNotes);
 }
+
+
 
 function submitNote(inputText, inputDate, inputImportant, inputIcon)
 {
@@ -33,6 +37,8 @@ function submitNote(inputText, inputDate, inputImportant, inputIcon)
 
   setLocal(originNotes);
 }
+
+
 
 function buildList()
 {
@@ -69,10 +75,14 @@ function buildList()
   }
 }
 
+
+
 window.onload = function()
 {
   buildList();
 }
+
+
 
 var submitBtn = document.querySelector("#addNote");
 
