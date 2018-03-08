@@ -39,8 +39,8 @@ function submitNote(inputText, inputDate, inputImportant, inputIcon)
 }
 
 
-
 function buildList()
+
 {
   var notes = getLocal();
 
