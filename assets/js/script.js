@@ -53,7 +53,7 @@ function buildList()
     var pElm = document.createElement("p");
     var btnEditElm = document.createElement("button")
     var btnDelElm = document.createElement("button")
-    
+
     if(notes[i].important === true)
     {
       liElm.style.backgroundColor = "#800080";
@@ -73,20 +73,20 @@ function buildList()
     }
 
     ulElm.appendChild(liElm);
-      
+
     liElm.appendChild(btnEditElm);
     liElm.appendChild(btnDelElm);
-      
+
     btnDelElm.innerHTML = "Delete";
     btnDelElm.classList.add("delBtn");
-      
+
     btnEditElm.innerHTML = "Edit";
     btnEditElm.classList.add("editBtn");
-      
-    
-      
+
+
+
     var delbtn = document.querySelector(delbtn);
-    
+
     delBtn.addEventListener("click", function(event){
     var index = event.target.getAttribute("data-index");
     var note = getLocal();
@@ -94,7 +94,7 @@ function buildList()
     setLocal(notes);
     buildList();
     });
-      
+
   }
 }
 
