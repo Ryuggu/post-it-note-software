@@ -90,7 +90,7 @@ function buildList()
     btnEditElm.addEventListener("click", function(event){
         var index = event.target.getAttribute("data-index");
         var note = getLocal();
-        notes[index].text = "changed";
+        notes[index].text = prompt();
         setLocal(notes);
         buildList();
     });
